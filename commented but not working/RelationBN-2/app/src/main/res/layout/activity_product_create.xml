@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/vlBlue"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextColor="@color/white"></android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:id="@+id/linLayout1"
+        android:padding="12dp"
+        android:layout_below="@+id/toolbar">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/product_title_label"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title_hint"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Code"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/product_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/product_code_hint"
+        android:textStyle="italic"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Barcode"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/product_barcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the product's barcode..."
+            android:textStyle="italic"
+            />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Location"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="Area: "
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="BIN: "
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+        <Spinner
+            android:id="@+id/area_spinner"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            />
+
+        <Spinner
+            android:id="@+id/bin_location_spinner"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            /></LinearLayout>
+
+
+        <Button
+            android:id="@+id/create_product"
+            android:layout_width="156dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="5dp"
+            android:onClick="productCreation"
+            android:text="Create Product" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linLayout1">
+
+    <!-- bottom navigation -->
+
+    <include layout="@layout/layout_bottom_navigation_view"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.dickies.android.relationbn.mapdisplay.MapActivity"
+xmlns:mapbox="http://schemas.android.com/apk/res-auto">
+
+<com.mapbox.mapboxsdk.maps.MapView
+    android:id="@+id/mapView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    mapbox:mapbox_cameraTargetLat="54.345865"
+    mapbox:mapbox_cameraTargetLng="-7.637913"
+    mapbox:mapbox_styleUrl="mapbox://styles/dickiep-gb/cjjyh2fn63yyh2rno4snttca5"
+    mapbox:mapbox_cameraZoom="18" >
+
+</com.mapbox.mapboxsdk.maps.MapView>
+
+    <com.estimote.indoorsdk_module.view.IndoorLocationView
+        android:id="@+id/indoor_view"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:background="#ffffff"/>
+
+    <Button
+        android:id="@+id/locationButton"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Your Location" />
+
+</RelativeLayout>

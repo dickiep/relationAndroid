@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/logoutButton"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:background="#fafafa"
+        android:text="LOGOUT"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What can we help you with?"
+        android:textSize="18sp"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewCategories"
+        android:layout_below="@+id/textViewCategories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       ></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
